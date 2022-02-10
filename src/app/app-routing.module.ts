@@ -8,6 +8,18 @@ const routes: Routes = [
   },  {
     path: 'home',
     loadChildren: () => import('./home/home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./Auth/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'logout',
+    loadChildren: () => import('./Auth/logout/logout.module').then( m => m.LogoutPageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./Auth/signup/signup.module').then( m => m.SignupPageModule)
   }
 
 ];
