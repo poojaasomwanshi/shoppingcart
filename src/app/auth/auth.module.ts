@@ -6,6 +6,7 @@ import { SignupPage } from './signup/signup.page';
 
 
 
+
 @NgModule({
   declarations: [LoginPage,LogoutPage,SignupPage],
   imports: [

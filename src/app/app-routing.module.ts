@@ -5,7 +5,8 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },  {
+  },
+  {
     path: 'home',
     loadChildren: () => import('./home/home/home.module').then( m => m.HomePageModule)
   },
@@ -20,6 +21,10 @@ const routes: Routes = [
   {
     path: 'signup',
     loadChildren: () => import('./Auth/signup/signup.module').then( m => m.SignupPageModule)
+  },
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('./Auth/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
   }
 
 ];

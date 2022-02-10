@@ -1,9 +1,37 @@
-<ion-header>
+<ion-header color="danger">
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content > 
+<ion-card ><img class="cardimage"  src="../../../assets/cartimages/cart1.png" alt="ion">
+  <ion-card-content>
+   
+    <ion-item  class="email" color="secondary">
+    <ion-label position="floating">Email</ion-label>
+    <ion-input  type="email"     ></ion-input>
+  </ion-item>
+<br>  
+  <ion-item class="password"  color="secondary">
+    <ion-label position="floating">Password</ion-label>
+    <ion-input  type="password"></ion-input>
 
-</ion-content>
+  </ion-item>
+  <p class="forgottext" > <a href="/forgot-password">Forgot password ?</a></p>
+  <ion-button expand="block"  class="loginButton" type="submit" >LogIn</ion-button>
+
+  <div>  <a href="/signup" > Create Account</a>
+</div> 
+
+<div class="loginOptions">
+  <p class="loginWith">Or LogIn With</p><div>
+    <ion-icon name="logo-facebook" class="logos"></ion-icon>
+  <ion-icon name="logo-instagram" class="logos"></ion-icon>
+  <ion-icon name="logo-twitter" class="logos"></ion-icon></div></div>
+</ion-card-content>
+  
+</ion-card></ion-content>
+
+
+
