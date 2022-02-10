@@ -1,29 +1,74 @@
-ion-content{
-    height:auto
-}
-ion-card{
-    height:auto;
-    width:auto
-}
-a{
-    text-decoration: none;
-}
-.forgottext{
-    text-align: center;
-  color: blue;
-  margin-left: 25px;
-}
-.cardimage{
-    width:auto
-}
-div{
-    align-items: center;
-    text-align: center;
-}
 
-.logos{
-        color: blue;
-        height: 25px;
-        width: 50px;
-        justify-content: center;padding: 2%;
+    @media (max-width: 576px){
+        ion-content{
+            height:auto;  --background:#ff8c00;
+        }
+        ion-card{
+            height:63%;
+            width:auto;
+          
+        }
+        .text{
+color: black;
+font-size: 18px;
+font-weight:200;
+
+        }
+        .label{
+            font-weight: normal;
+            color: black;
+            font-size: 1.5em;
+        }  
+    
+        a{
+            text-decoration: none;
+        }
+        .forgottext{
+            text-align: right;
+          color: blue;
+          
+          margin-top: 5px;
+          padding: 5px;
+        }
+        
+        div{
+            align-items: center;
+            text-align: center;
+        }
+        ion-icon{
+            color: #ff8c00;
+        }
+        .logos{
+                color: darkblue;
+                height: 25px;
+                width: 50px;
+                justify-content: center;padding: 2%;
+            }
+            .cardimage{
+                padding: 25px;
+            }
+            .loginButton{
+            margin-top: 8%;
+                border-radius: 5px;
+                border-width: 10px;
+               --background:#ff8c00;
+               height: 50px;
+               font-size: 18px;
+               font-weight: bold;
+            }
+            .bottomtext{
+                text-align: center;
+            }
+            .register{
+                color: darkblue;
+            }
+            .loginOptions{
+                margin-top: 1%;
+            }
     }
+    // @media (max-width: 576px) {
+    //     ion-card-content {
+    //         font-size: 2rem !important;
+    //     }
+    // }
+ 

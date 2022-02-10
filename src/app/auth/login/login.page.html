@@ -4,34 +4,37 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content > 
-<ion-card ><img class="cardimage"  src="../../../assets/cartimages/cart1.png" alt="ion">
+<ion-content ><div> <img class="cardimage"  src="../../../assets/cartimages/hamburger.png" alt="ion"></div>
+<ion-card >
   <ion-card-content>
-   
-    <ion-item  class="email" color="secondary">
+  <div> <ion-text class="text"><h1>Hello</h1></ion-text>
+    <div><ion-text  class="text">SignIn to your account</ion-text></div></div>
+    <ion-item  class="label">
+      <ion-icon name="mail" slot="end"></ion-icon>
     <ion-label position="floating">Email</ion-label>
     <ion-input  type="email"     ></ion-input>
   </ion-item>
 <br>  
-  <ion-item class="password"  color="secondary">
+  <ion-item class="label"  ><ion-icon name="eye-off" slot="end"></ion-icon>
     <ion-label position="floating">Password</ion-label>
     <ion-input  type="password"></ion-input>
 
   </ion-item>
-  <p class="forgottext" > <a href="/forgot-password">Forgot password ?</a></p>
+  <p class="forgottext" > <a href="/forgot-password">Forgot your password ?</a></p>
   <ion-button expand="block"  class="loginButton" type="submit" >LogIn</ion-button>
 
-  <div>  <a href="/signup" > Create Account</a>
-</div> 
+ 
 
 <div class="loginOptions">
-  <p class="loginWith">Or LogIn With</p><div>
+  <p class="loginWith">Or LogIn with using social media</p><div>
     <ion-icon name="logo-facebook" class="logos"></ion-icon>
   <ion-icon name="logo-instagram" class="logos"></ion-icon>
   <ion-icon name="logo-twitter" class="logos"></ion-icon></div></div>
 </ion-card-content>
   
-</ion-card></ion-content>
+</ion-card> <p class="bottomtext">Don't have an account ? <a href="/signup" class="register"> Register Now</a> </p>
+ 
+</ion-content>
 
 
 
