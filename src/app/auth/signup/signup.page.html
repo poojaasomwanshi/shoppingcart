@@ -1,9 +1,58 @@
-<ion-header>
+<ion-header color="danger">
   <ion-toolbar>
-    <ion-title>signup</ion-title>
+    <ion-title>SignUp </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="form-content" ><div text-center class="cardimage"> <img   src="../../../assets/cartimages/hamburger.png" alt="ion"> <div> <ion-text class="text"><h1>Create Account </h1></ion-text>
+</div></div>
+<form ><ion-card >
+  <ion-card-content>
+ 
+   <ion-item  class="label">
+    <ion-icon name="person" slot="end"></ion-icon>
+  <ion-label position="floating">Username</ion-label>
+  <ion-input  type="name"    ></ion-input>
+</ion-item>
+<br>
+<ion-item  class="label">
+  <ion-icon name="location" slot="end"></ion-icon>
+  <ion-label position="floating">Address</ion-label>
+<ion-input ></ion-input>
 
+</ion-item>
+<br>
+<ion-item  class="label">
+  <ion-icon name="call" slot="end"></ion-icon>
+<ion-label position="floating">Mobile</ion-label>
+<ion-input  type="tel"     ></ion-input>
+</ion-item>
+<br>
+    <ion-item  class="label">
+      <ion-icon name="mail" slot="end"></ion-icon>
+    <ion-label position="floating">Email</ion-label>
+    <ion-input  type="email"    ></ion-input>
+  </ion-item>
+  
+<br>  
+  <ion-item class="label"  ><ion-icon name="eye-off" slot="end"></ion-icon>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input  type="password" ></ion-input>
+
+  </ion-item>
+ 
+  <ion-button expand="block"  class="signupButton" type="submit" >SignUp</ion-button>
+
+
+</ion-card-content>
+  
+</ion-card>
+
+</form> 
+
+<p class="bottomtext">Already have account ? <a href="/login" class="register"> LogIn here ..</a> </p>
+ 
 </ion-content>
+
+
+
