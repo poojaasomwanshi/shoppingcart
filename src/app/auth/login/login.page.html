@@ -14,10 +14,10 @@
     <ion-label position="floating">Email</ion-label>
     <ion-input  type="email"   formControlName="email"  ></ion-input>
   </ion-item>
-  <span class="error ion-padding" *ngIf=" !loginForm.reset && isSubmitted && errorControl.email.errors?.required">
+  <span class="error ion-padding" *ngIf=" isSubmitted && errorControl.email.errors?.required">
     Email is required.
   </span>
-  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+  <span class="error ion-padding" *ngIf="!loginForm.reset && isSubmitted && errorControl.email.errors?.pattern">
     Please provide valid email id.
   </span>
 <br>  
@@ -26,10 +26,10 @@
     <ion-input  type="password" formControlName="password"></ion-input>
 
   </ion-item>
-  <span class="error ion-padding" *ngIf="!loginForm.reset &&isSubmitted && errorControl.password.errors?.required">
+  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
     password is required.
   </span>
-  <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.pattern">
+  <span class="error ion-padding" *ngIf="!loginForm.reset &&isSubmitted && errorControl.password.errors?.pattern">
     Password must contain at least 6 and max 16 letters with special symbol,upper-lower case character and number.
   </span>
   <p class="forgottext" > <a href="/forgot-password">Forgot your password ?</a></p>
