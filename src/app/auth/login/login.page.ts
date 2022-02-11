@@ -43,7 +43,7 @@ else{
       return false;
     }else{
       alert("Login Successfull")
-      console.log(this.loginForm.value)
+      console.log(this.loginForm.value.email)
       this.loginForm.reset()
       //move to home page  after login
       this.router.navigate(['tabs/home'])

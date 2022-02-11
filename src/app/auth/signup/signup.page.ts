@@ -43,8 +43,8 @@ export class SignupPage implements OnInit {
       console.log("provide required values")
       return false;
     }else{
-      alert("Login Successfull")
-      console.log(this.signupForm.value)
+      alert("SignUp Successfull")
+      console.log(this.signupForm.value.username , this.signupForm.value.email , this.signupForm.value.mobile)
       this.signupForm.reset()
       //move to home page  after login
       this.router.navigate(['tabs/home'])
