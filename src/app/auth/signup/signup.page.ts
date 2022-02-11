@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class SignupPage implements OnInit {
   signupForm:FormGroup;
   isSubmitted=false;
+  showpassword=false;
+  passwordToggleicon='eye';
   constructor(public formBuilder:FormBuilder, private router: Router) { }
 
   ngOnInit() {
@@ -24,6 +26,17 @@ export class SignupPage implements OnInit {
   get errorControl() {
     return this.signupForm.controls;
   }
+  togglePassword():void{
+    this.showpassword=!this.showpassword;
+    if(this.passwordToggleicon=='eye')
+    {
+      this.passwordToggleicon='eye-off'
+    }
+    else{
+      this.passwordToggleicon='eye'
+    }
+    }
+
   submitForm(){
     this.isSubmitted=true;
     if(!this.signupForm.valid){

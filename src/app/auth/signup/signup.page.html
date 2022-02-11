@@ -45,11 +45,11 @@
     Please provide valid email id.
   </span>
 <br>  
-  <ion-item class="label"  ><ion-icon name="eye-off" slot="end"></ion-icon>
-    <ion-label position="floating">Password</ion-label>
-    <ion-input  type="password" formControlName="password"></ion-input>
-
-  </ion-item>
+<ion-item class="label"  > <ion-label position="floating">Password</ion-label>
+  <ion-input  [type]="showpassword ? 'text' : 'password'" formControlName="password"></ion-input>
+  
+  <ion-icon [name]="passwordToggleicon" slot="end" (click)="togglePassword()"></ion-icon>
+</ion-item>
   <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
     password is required.
   </span>

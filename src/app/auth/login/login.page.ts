@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 export class LoginPage implements OnInit {
   loginForm:FormGroup;
   isSubmitted=false;
+  showpassword=false;
+  passwordToggleicon='eye';
   constructor(public formBuilder:FormBuilder, private router: Router) { }
 
   ngOnInit() {
@@ -18,9 +20,22 @@ export class LoginPage implements OnInit {
 //  min 6 max 16 letter password, with at least a symbol, upper and lower case letters and a number , and no whitespace
     })
   }
+
   get errorControl() {
     return this.loginForm.controls;
   }
+
+togglePassword():void{
+this.showpassword=!this.showpassword;
+if(this.passwordToggleicon=='eye')
+{
+  this.passwordToggleicon='eye-off'
+}
+else{
+  this.passwordToggleicon='eye'
+}
+}
+
   submitForm(){
     this.isSubmitted=true;
     if(!this.loginForm.valid){
