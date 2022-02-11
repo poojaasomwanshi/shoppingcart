@@ -1,0 +1,38 @@
+h1{
+    color: black;
+    font-size: 20px;
+    font-weight:bold;
+    text-align: center;
+
+  }
+.cardimage{
+    padding: 5px;
+}
+div{
+    align-items: center;
+    text-align: center;
+}
+ion-icon{
+    color: #ff8c00;
+}
+.signupButton{
+    border-radius: 5px;
+    border-width: 10px;
+   --background:#ff6700;
+   height: 50px;
+   font-size: 18px;
+   font-weight: bold;margin-top: 30px;
+}
+.bottomtext{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+
+ion-content{
+    height:auto;  --background:rgb(255, 196, 68)            ;
+}
+.error{
+    color:red !important;
+}
