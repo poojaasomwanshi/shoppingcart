@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { LoginPage } from './login/login.page';
 import { LogoutPage } from './logout/logout.page';
 import { SignupPage } from './signup/signup.page';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -10,7 +11,7 @@ import { SignupPage } from './signup/signup.page';
 @NgModule({
   declarations: [LoginPage,LogoutPage,SignupPage],
   imports: [
-    CommonModule
+    CommonModule,FormsModule,ReactiveFormsModule
   ],
   exports:[LoginPage,LogoutPage,SignupPage]
 })
