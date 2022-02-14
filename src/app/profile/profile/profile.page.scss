@@ -6,19 +6,16 @@ ion-card{
     height: 95%;
     margin:5%; --background:pink;
 }
-.loginbutton{
-    margin-bottom: 5%;
-    height: 45%;
-    border-bottom: 1px solid black;
-    
-}
+
 .profilelist{
     margin: 5%;
     height: 25%;
 }
-.loginimage{
+.profileimage{
     height: 50%;
 width: 50%;
+padding: 0;
+margin-right: -15%;
 
 }
 ion-item{
@@ -26,4 +23,12 @@ ion-item{
 }
 div{
 text-align: center;
-align-items: center;}
+align-items: center;
+}
+.profiletext{
+        font-size: 18px;
+margin-left: 5px;
+    }
+.profileheader{
+    margin-top: -10px;
+}    
