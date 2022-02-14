@@ -27,6 +27,12 @@ const routes: Routes = [
     loadChildren: () => import('./Auth/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
   },
   
+  {
+    path: 'products-detail',
+    loadChildren: () => import('./product/products-detail/products-detail.module').then( m => m.ProductsDetailPageModule)
+  },
+
+  
 
 ];
 @NgModule({
