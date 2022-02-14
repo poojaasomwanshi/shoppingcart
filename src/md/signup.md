@@ -79,3 +79,6 @@
 <p class="bottomtext">Already have account ? <a href="/login" class="register"> LogIn here ..</a> </p>
  
 </ion-content>
+
+
+
