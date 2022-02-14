@@ -4,8 +4,19 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="form-content" ><div text-center class="cardimage"> <img   src="../../../assets/cartimages/hamburger.png" alt="ion"> <div> <ion-text class="text"><h1>Create Account </h1></ion-text>
-</div></div>
+<ion-content class="form-content" >
+  <ion-item class="signupheader ion-no-padding" lines="none">
+<div>
+     <h1>Getting Started</h1>
+     <div><p>Create account to continue!</p></div> 
+      
+    </div>
+        <ion-img  slot="end" src="../../../assets/cartimages/fast-food.png">
+  
+        </ion-img>
+   
+
+  </ion-item>
 <form [formGroup]="signupForm" (ngSubmit)="submitForm()" novalidate><ion-card >
   <ion-card-content>
  
