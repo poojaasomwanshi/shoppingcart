@@ -1,11 +1,14 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="warning">
     <ion-title>home</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-slides [options]="slideOpts" >
+  <ion-slides [options]="slideOpts">
+    <ion-slide >
+      <ion-img src="../../../assets/image/Dosa.jfif"></ion-img>
+    </ion-slide>
     <ion-slide *ngFor="let img of slideImage">
       <ion-img src="{{img}}"></ion-img>
     </ion-slide>
@@ -17,67 +20,77 @@
     <ion-row>
       <ion-col>
         <ion-card>
-        <ion-img src="../../../assets/image/Burger/veg-burger.jpg" ></ion-img>
-      </ion-card>
+          <ion-img src="../../../assets/image/Burger/veg-burger.jpg"></ion-img>
+          <h5 class="second-txt">Veg Burgers</h5>
+        </ion-card>
       </ion-col>
       <ion-col>
         <ion-card>
-        <ion-img src="../../../assets/image/Pizza/chicken-pizza.jpg" ></ion-img>
-      </ion-card>
+          <ion-img src="../../../assets/image/Pizza/chicken-pizza.jpg"></ion-img>
+          <h5 class="second-txt">Chicken Pizza</h5>
+        </ion-card>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col>
         <ion-card>
-        <ion-img src="../../../assets/image/Salad/caesar-salad.jpg"></ion-img>
-      </ion-card>
+          <ion-img src="../../../assets/image/Salad/caesar-salad.jpg"></ion-img>
+          <h5 class="second-txt">Caesar</h5>
+        </ion-card>
       </ion-col>
       <ion-col>
         <ion-card>
-        <ion-img src="../../../assets/image/SouthIndian/ravaDosa-SI.jpg" ></ion-img>
-      </ion-card>
+          <ion-img src="../../../assets/image/SouthIndian/ravaDosa-SI.jpg"></ion-img>
+          <h5 class="second-txt">Rava Dosa</h5>
+        </ion-card>
       </ion-col>
     </ion-row>
-    </ion-grid>
-    <div>
-      <h3 class="padding font">Categories</h3>
-    </div>
-    <ion-grid>
-      <ion-row>
-        <ion-col>
-          <ion-card>
+  </ion-grid>
+  <div>
+    <h3 class="padding font">Categories</h3>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
           <ion-img src="../../../assets/image/Burger/veg-burger.jpg"></ion-img>
+          <h5 class="second-txt">Burgers</h5>
         </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
           <ion-img src="../../../assets/image/Pizza/chicken-pizza.jpg"></ion-img>
+          <h5 class="second-txt">Pizza</h5>
         </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
           <ion-img src="../../../assets/image/SouthIndian/Idli-SI.jpg"></ion-img>
+          <h5 class="second-txt">South Indian </h5>
         </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
           <ion-img src="../../../assets/image/Sandwitches/chicken-sandwich.jpg"></ion-img>
+          <h5 class="second-txt">Sandwitches</h5>
         </ion-card>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
           <ion-img src="../../../assets/image/Combo/display-combo.jpg"></ion-img>
+          <h5 class="second-txt">Combo</h5>
         </ion-card>
-        </ion-col>
-        <ion-col>
-          <ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
           <ion-img src="../../../assets/image/Salad/display-salad.jpg"></ion-img>
+          <h5 class="second-txt">Salads</h5>
         </ion-card>
-        </ion-col>
-      </ion-row>
-      </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

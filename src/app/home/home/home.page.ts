@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePage implements OnInit {
   slideImage=[
-    "../../../assets/image/Dosa.jfif",
+    //"../../../assets/image/Dosa.jfif",
     "../../../assets/image/Salad.jfif",
     "../../../assets/image/Sandwitch.jfif",
-    "../../../assets/image/Dosa.jfif"
+    "../../../assets/image/Burger/display-burger.jpg"
   ];
 
   trendingImage=[
@@ -22,9 +22,9 @@ export class HomePage implements OnInit {
 
   constructor() { }
   slideOpts = {
-    initialSlide: 1,
+    //initialSlide: 1,
     speed: 300,
-    autoplay: true,
+    autoplay:true,
     loop:true
   };
   ngOnInit() {
