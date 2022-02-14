@@ -1,0 +1,29 @@
+ion-content{
+    --background:yellow;
+}
+ion-card{
+    width:auto ;
+    height: 95%;
+    margin:5%; --background:pink;
+}
+.loginbutton{
+    margin-bottom: 5%;
+    height: 45%;
+    border-bottom: 1px solid black;
+    
+}
+.profilelist{
+    margin: 5%;
+    height: 25%;
+}
+.loginimage{
+    height: 50%;
+width: 50%;
+
+}
+ion-item{
+    --background:pinkhite;
+}
+div{
+text-align: center;
+align-items: center;}
