@@ -5,8 +5,8 @@ ion-content{
 }
 ion-card{
     width:auto ;
-    height: 95%;
-    margin:5%; --background:pink;
+    height: 15%;
+    margin:5%; --background:white;
 }
 
 .profilelist{
@@ -62,13 +62,21 @@ margin-bottom: 50px;
     --background:white;
 
 }
-.listitem{
-border-top: 1px solid rgb(255, 231, 187) ;;
 
-}
 .logos{
     color: blue;
 }
 .logo{
     color:darkblue;
+}
+.main-header{
+    text-align: left;
+    height: 100px;background-color: white;
+
+    margin-bottom: 20px;
+border: none;
+border-width:0px;   }
+
+p{
+    margin-top: 10px;
 }
