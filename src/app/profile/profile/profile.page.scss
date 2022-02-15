@@ -1,5 +1,7 @@
 ion-content{
-    --background:yellow;
+    // --background:rgb(255, 231, 187);
+    --background:white;
+
 }
 ion-card{
     width:auto ;
@@ -12,8 +14,8 @@ ion-card{
     height: 25%;
 }
 .profileimage{
-    height: 50%;
-width: 50%;
+    height: 45%;
+width: 45%;
 padding: 0;
 margin-right: -15%;
 
@@ -27,8 +29,46 @@ align-items: center;
 }
 .profiletext{
         font-size: 18px;
-margin-left: 5px;
+padding: 1px;
+font-weight: bolder;
+    }
+    .profiletext1{
+        font-size: 18px;
+margin-top: -1px;
     }
 .profileheader{
     margin-top: -10px;
 }    
+.profileloginbutton{
+justify-content: center;
+align-items: center;
+margin-top: -35px;
+margin-bottom: 50px;
+
+}
+.ionbutton{
+    width: 200px;
+    height: 45px;
+    margin-left: 10px;
+    font-size: 20px;
+    --background:rgb(255, 123, 0);
+    text-align: center;
+}
+.listitems{
+    border-bottom: 1px solid rgb(255, 231, 187) ;;
+    font-size: 20px;
+    padding: 5px;
+    // --background:rgb(255, 231, 187) ;
+    --background:white;
+
+}
+.listitem{
+border-top: 1px solid rgb(255, 231, 187) ;;
+
+}
+.logos{
+    color: blue;
+}
+.logo{
+    color:darkblue;
+}

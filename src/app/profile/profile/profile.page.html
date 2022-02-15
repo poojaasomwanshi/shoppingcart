@@ -7,37 +7,53 @@
 <ion-content>
 
 
-  <ion-card>
-    <ion-item lines="none" class="loginbutton">
+
+  <ion-item class="profileheader ion-no-padding" lines="none">
+    <div>
+      <h1 class="profiletext">Looking for delicious food?</h1>
       <div>
-        <p>Looking for delicious food ?</p> <img class="loginimage" src="../../../assets/image/profile/question.png">
-        <br> <a href="/signup" class="register"> Register Now</a>
+        <p  class="profiletext1">Login to your account.</p>
       </div>
-    </ion-item>
-    <ion-card-content class="profilelist">
+
+    </div>
+    <ion-img slot="end" class="profileimage" src="../../../assets/image/profile/drink.png">
+
+    </ion-img>
+
+  </ion-item>
+
+ 
+<div class="profileloginbutton"> 
+  
+  
+  <ion-button class="ionbutton" expand="block"  shape="round" (click)="onClick()" >
+    Login
+    <ion-icon slot="end" name="fast-food-sharp"></ion-icon>  
+  </ion-button>
+</div>
 
 
-      <ion-item>
-        <ion-icon name="wifi" slot="start"></ion-icon>
-        <ion-label>Card Link Item 1 activated</ion-label>
-      </ion-item>
+  <ion-item class="listitem listitems" lines="none">
+    <ion-icon class="logos" slot="start" name="location-outline"></ion-icon>
 
-      <ion-item>
-        <ion-icon name="wine" slot="start"></ion-icon>
-        <ion-label>Card Link Item 2</ion-label>
-      </ion-item>
+    <ion-label>Store Locations</ion-label>
+    <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+  </ion-item>
+  <ion-item class="listitem1 listitems" lines="none">
+    <ion-icon class="logos" slot="start" name="information-circle-outline"></ion-icon>
+    <ion-label>AboutUs</ion-label>
+    <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+  </ion-item>
+  <ion-item class="listitem1 listitems" lines="none">
+  <ion-icon class="logos" slot="start" name="help-circle-outline"></ion-icon>
+    <ion-label>Help</ion-label>
+    <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+  </ion-item>
 
-      <ion-item>
-        <ion-icon name="warning" slot="start"></ion-icon>
-        <ion-label>Card Button Item 1 activated</ion-label>
-      </ion-item>
 
-      <ion-item>
-        <ion-icon name="walk" slot="start"></ion-icon>
-        <ion-label>Card Button Item 2</ion-label>
-      </ion-item>
-    </ion-card-content>
-  </ion-card>
+
+
+     
 
 
 </ion-content>
