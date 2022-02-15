@@ -7,7 +7,7 @@
 <ion-content>
 
 
-
+<div *ngIf="isloggedin==false">
   <ion-item class="profileheader ion-no-padding" lines="none">
     <div>
       <h1 class="profiletext">Looking for delicious food?</h1>
@@ -30,26 +30,60 @@
     Login
     <ion-icon slot="end" name="fast-food-sharp"></ion-icon>  
   </ion-button>
+</div></div>
+
+<div  *ngIf="isloggedin==true">
+  <ion-card>
+  <ion-grid class="main-header" >
+    <div align="center"> 
+<h2>Welcome </h2> <p>Jack@gmail.com</p>
+</div>
+  </ion-grid></ion-card>
+</div>
+    <div>
+<div>
+  <ion-item class="listitem listitems" lines="none" button (click)="buttonClick()" *ngIf="isloggedin==true">
+
+    <ion-icon class="logos" slot="start" name="person-outline"></ion-icon>
+    <ion-label>My Account</ion-label>
+    <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+
+  </ion-item>
+
+
+  <ion-item class="listitem listitems" lines="none" *ngIf="isloggedin==true || isloggedin==false ">
+  <ion-icon class="logos" slot="start" name="location-outline"></ion-icon>
+
+  <ion-label>Store Locations</ion-label>
+  <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+</ion-item>
+<ion-item class="listitem1 listitems" lines="none" *ngIf="isloggedin==true || isloggedin==false ">
+  <ion-icon class="logos" slot="start" name="information-circle-outline"></ion-icon>
+  <ion-label>AboutUs</ion-label>
+  <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+</ion-item>
+<ion-item class="listitem1 listitems" lines="none"  *ngIf="isloggedin==true || isloggedin==false ">
+<ion-icon class="logos" slot="start" name="help-circle-outline"></ion-icon>
+  <ion-label>Help</ion-label>
+  <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+</ion-item>
+
+
+<ion-item class="listitem1 listitems" lines="none" *ngIf="isloggedin==true">
+  <ion-icon class="logos" slot="start" name="chatbox-ellipses-outline"></ion-icon>
+    <ion-label>Feedback</ion-label>
+    <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+  </ion-item>
+<ion-item class="listitem listitems" lines="none" *ngIf="isloggedin==true">
+  <ion-icon class="logos" slot="start" name="log-out-outline"></ion-icon>
+
+  <ion-label>Logout</ion-label>
+  <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+</ion-item>
 </div>
 
-
-  <ion-item class="listitem listitems" lines="none">
-    <ion-icon class="logos" slot="start" name="location-outline"></ion-icon>
-
-    <ion-label>Store Locations</ion-label>
-    <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
-  </ion-item>
-  <ion-item class="listitem1 listitems" lines="none">
-    <ion-icon class="logos" slot="start" name="information-circle-outline"></ion-icon>
-    <ion-label>AboutUs</ion-label>
-    <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
-  </ion-item>
-  <ion-item class="listitem1 listitems" lines="none">
-  <ion-icon class="logos" slot="start" name="help-circle-outline"></ion-icon>
-    <ion-label>Help</ion-label>
-    <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
-  </ion-item>
-
+   
+</div>
 
 
 

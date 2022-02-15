@@ -32,9 +32,31 @@ const routes: Routes = [
   },
   
   {
+    path: 'products-detail',
+    loadChildren: () => import('./product/products-detail/products-detail.module').then( m => m.ProductsDetailPageModule)
+  },  {
+    path: 'my-account',
+    loadChildren: () => import('./profile/my-account/my-account.module').then( m => m.MyAccountPageModule)
+  },
+<<<<<<< HEAD
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('./Auth/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  
+  {
     path: 'products-detail/:category',
     loadChildren: () => import('./product/products-detail/products-detail.module').then( m => m.ProductsDetailPageModule)
   },
+
+  
+=======
+>>>>>>> 8dee76a886bdc9d68c1d9f160cac194991e7881c
+
 
   
 

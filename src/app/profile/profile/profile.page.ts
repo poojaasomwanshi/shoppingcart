@@ -6,6 +6,7 @@ import {Router} from '@angular/router'
   styleUrls: ['./profile.page.scss'],
 })
 export class ProfilePage implements OnInit {
+  isloggedin=true;
 
   constructor(private route: Router) { }
 
@@ -14,7 +15,10 @@ export class ProfilePage implements OnInit {
     this.route.navigate(['/login']);
   
   }
+  buttonClick(){
+    this.route.navigate(['/my-account']);
 
+  }
   ngOnInit() {
     
   }
