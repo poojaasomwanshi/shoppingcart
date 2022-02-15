@@ -1,0 +1,158 @@
+{
+    "burger":[
+        {
+            "id":1,
+            "title":"Zinger Burger",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Burger/zinger-burger.jpg",
+            "price":50
+        },{
+            "id":2,
+            "title":"Chicken Burger",
+            "type":"nonveg",
+            "imgurl":"../../../assets/image/Burger/chicken-burger.jpg",
+            "price":100
+        },{
+            "id":3,
+            "title":"Cheese Burger",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Burger/cheese-burger.jpg",
+            "price":70
+        },{
+            "id":4,
+            "title":"Veg Burger",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Burger/veg-burger.jpg",
+            "price":35
+        }
+    ],
+    "pizza":[
+        {
+            "id":1,
+            "title":"Italian Pizza",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Pizza/italian-pizza.jpg",
+            "price":350
+        },{
+            "id":2,
+            "title":"Chicken Pizza",
+            "type":"nonveg",
+            "imgurl":"../../../assets/image/Pizza/chicken-pizza.jpg",
+            "price":500
+        },{
+            "id":3,
+            "title":"Pepperoni Pizza",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Pizza/pepperoni-pizza.jpg",
+            "price":400
+        },{
+            "id":4,
+            "title":"Cheese Pizza",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Pizza/cheese-pizza.jpg",
+            "price":300
+        }
+    ],
+    "southindian":[
+        {
+            "id":1,
+            "title":"Masala Dosa",
+            "type":"veg",
+            "imgurl":"../../../assets/image/SouthIndian/MasalaDosa-SI.jpg",
+            "price":150
+        },{
+            "id":2,
+            "title":"Medu Vada",
+            "type":"veg",
+            "imgurl":"../../../assets/image/SouthIndian/meduVada-SI.jpg",
+            "price":100
+        },{
+            "id":3,
+            "title":"Rava Dosa",
+            "type":"veg",
+            "imgurl":"../../../assets/image/SouthIndian/ravaDosa-SI.jpg",
+            "price":170
+        },{
+            "id":4,
+            "title":"Idli",
+            "type":"veg",
+            "imgurl":"../../../assets/image/SouthIndian/Idli-SI.jpg",
+            "price":100
+        }
+    ],
+    "sandwich":[
+        {
+            "id":1,
+            "title":"Cheese Sandwich",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Sandwiches/cheese-sandwich.jpg",
+            "price":70
+        },{
+            "id":2,
+            "title":"Chicken Sandwich",
+            "type":"nonveg",
+            "imgurl":"../../../assets/image/Sandwiches/chicken-sandwich.jpg",
+            "price":100
+        },{
+            "id":3,
+            "title":"Paneer Tikka Sandwich",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Sandwiches/paneer-tikka-sandwich.jpg",
+            "price":80
+        },{
+            "id":4,
+            "title":"Veg Sandwich",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Sandwiches/veg-sandwich.jpg",
+            "price":50
+        }
+    ],
+    "combo":[
+        {
+            "id":1,
+            "title":"Popcorn Combo",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Combo/popcorn-combo.jpg",
+            "price":200
+        },{
+            "id":2,
+            "title":"Fries Combo",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Combo/fries-combo.jpg",
+            "price":150
+        },{
+            "id":3,
+            "title":"Burger Combo",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Combo/burger-combo.jpg",
+            "price":100
+        }
+    ],
+    "salad":[
+        {
+            "id":1,
+            "title":"Greek Salad",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Salad/greek-salad.jpg",
+            "price":100
+        },{
+            "id":2,
+            "title":"Chicken Salad",
+            "type":"nonveg",
+            "imgurl":"../../../assets/image/Salad/chicken-salad.jpg",
+            "price":200
+        },{
+            "id":3,
+            "title":"Carsar Salad",
+            "type":"nonveg",
+            "imgurl":"../../../assets/image/Salad/caesar-salad.jpg",
+            "price":150
+        },{
+            "id":4,
+            "title":"Fruit Salad",
+            "type":"veg",
+            "imgurl":"../../../assets/image/Salad/fruit-salad.jpg",
+            "price":80
+        }
+    ]
+}

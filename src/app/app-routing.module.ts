@@ -47,7 +47,19 @@ const routes: Routes = [
     path: 'login-security',
     loadChildren: () => import('./profile/login-security/login-security.module').then( m => m.LoginSecurityPageModule)
   },
-
+  {
+    path: 'forgot-password',
+    loadChildren: () => import('./Auth/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./profile/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  
+  {
+    path: 'products-detail/:category',
+    loadChildren: () => import('./product/products-detail/products-detail.module').then( m => m.ProductsDetailPageModule)
+  },
 
   
 
