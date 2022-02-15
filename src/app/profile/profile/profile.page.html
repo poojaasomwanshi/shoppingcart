@@ -7,7 +7,7 @@
 <ion-content>
 
 
-
+<div>
   <ion-item class="profileheader ion-no-padding" lines="none">
     <div>
       <h1 class="profiletext">Looking for delicious food?</h1>
@@ -30,10 +30,22 @@
     Login
     <ion-icon slot="end" name="fast-food-sharp"></ion-icon>  
   </ion-button>
-</div>
+</div></div>
 
 
-  <ion-item class="listitem listitems" lines="none">
+  <div>
+
+
+    <ion-item class="listitem listitems" lines="none" button (click)="buttonClick()">
+
+      <ion-icon class="logos" slot="start" name="person-outline"></ion-icon>
+      <ion-label>My Account</ion-label>
+      <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+
+    </ion-item>
+
+
+    <ion-item class="listitem listitems" lines="none">
     <ion-icon class="logos" slot="start" name="location-outline"></ion-icon>
 
     <ion-label>Store Locations</ion-label>
@@ -49,7 +61,18 @@
     <ion-label>Help</ion-label>
     <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
   </ion-item>
+  <ion-item class="listitem1 listitems" lines="none">
+    <ion-icon class="logos" slot="start" name="chatbox-ellipses-outline"></ion-icon>
+      <ion-label>Feedback</ion-label>
+      <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+    </ion-item>
+  <ion-item class="listitem listitems" lines="none">
+    <ion-icon class="logos" slot="start" name="log-out-outline"></ion-icon>
 
+    <ion-label>Logout</ion-label>
+    <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
+  </ion-item>
+</div>
 
 
 

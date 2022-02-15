@@ -1,0 +1,56 @@
+.profileimage{
+    height: 5%;
+width: 5%;
+padding: 0;
+margin-right: -15%;
+
+}
+.imagebody{            
+    
+
+
+    height: 75;
+    width: auto;
+}
+.main-header {
+    height: 28vh;
+    width: 120%;
+    background: linear-gradient(90deg,rgb(172, 7, 136) 0%, rgb(175, 4, 161) 100%);
+    box-shadow: 0 1px 10px rgb(250, 226, 243);
+    border-radius: 0 0 50% 50%;
+    margin-left: -4.5vh;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    div {
+        transform: translateY(2vh);
+        ion-avatar {
+            width: 15vh;
+            height: 15vh;
+            background: white;
+            margin-bottom: 5px;
+            border: 1px solid white;
+        }
+    }
+}
+.listitems{
+    border-bottom: 1px solid rgb(240, 116, 223) ;
+    font-size: 20px;
+    padding: 5px;
+    // --background:rgb(255, 231, 187) ;
+    --background:white;
+
+}
+.logos{
+    color: rgb(255, 0, 179);
+}
+.logo{
+    color:rgb(179, 0, 125);
+}
+.camera-icon
+{
+    margin-top: -100px;
+    margin-left: 50px;
+    height: 50px;
+    width: 50px;
+    color: rgb(169, 232, 248);
+}
