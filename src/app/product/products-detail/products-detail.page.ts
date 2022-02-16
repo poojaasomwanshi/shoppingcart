@@ -10,11 +10,12 @@ import { ProductService } from 'src/app/providers/product/product.service';
 export class ProductsDetailPage implements OnInit {
   public category: string;
   public products: any = [];
+  public quantity: number = 1;
   constructor(private activatedRoute: ActivatedRoute, private prodsvc: ProductService) { }
 
   ngOnInit() {
     this.category = this.activatedRoute.snapshot.paramMap.get('category');
-    this.prodsvc.getProducts().subscribe((data:any) => {
+    this.prodsvc.getProducts().subscribe((data: any) => {
       if (this.category === "burger") {
         this.products = data.burger
       } else if (this.category === "pizza") {
@@ -33,4 +34,17 @@ export class ProductsDetailPage implements OnInit {
 
   }
 
+  public increment() {
+    this.quantity++;
+  }
+
+  public decrement() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
+  }
+
+  public addToCart(){
+    
+  }
 }
