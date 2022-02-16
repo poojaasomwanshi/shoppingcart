@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
+import { CartService } from 'src/app/providers/cart/cart.service';
 import { ProductService } from 'src/app/providers/product/product.service';
 
 @Component({
@@ -10,8 +12,7 @@ import { ProductService } from 'src/app/providers/product/product.service';
 export class ProductsDetailPage implements OnInit {
   public category: string;
   public products: any = [];
-  public quantity: number = 1;
-  constructor(private activatedRoute: ActivatedRoute, private prodsvc: ProductService) { }
+  constructor(private activatedRoute: ActivatedRoute, private cartsvc: CartService, private prodsvc: ProductService) { }
 
   ngOnInit() {
     this.category = this.activatedRoute.snapshot.paramMap.get('category');
@@ -34,17 +35,35 @@ export class ProductsDetailPage implements OnInit {
 
   }
 
-  public increment() {
-    this.quantity++;
+  public increment(id:number) {
+    this.products.forEach(element => {
+      if (id == element.id) {
+        if(element.quantity){
+          element.quantity++;
+        }else{
+          element.quantity=2;
+        }
+      }
+    });
   }
 
-  public decrement() {
-    if (this.quantity > 1) {
-      this.quantity--;
-    }
+  public decrement(id:number) {
+    this.products.forEach(element => {
+      if (id == element.id) {
+        if(element.quantity>1){
+          element.quantity--;
+        }else{
+          element.quantity=2;
+        }
+      }
+    });
   }
 
-  public addToCart(){
-    
+  public addToCart(id: number) {
+    this.products.forEach(element => {
+      if (id == element.id) {
+        //this.cartsvc.addOrderProduct(element);
+      }
+    });
   }
 }

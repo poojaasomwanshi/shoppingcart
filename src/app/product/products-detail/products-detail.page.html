@@ -25,12 +25,12 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button color="warning" size="small" class="qty" (click)="decrement()">-</ion-button>
-           <span class="title-font "> {{quantity}} </span>
-          <ion-button color="warning" size="small" class="qty" (click)="increment()">+</ion-button>
+          <ion-button color="warning" size="small" class="qty" (click)="decrement(prod.id)">-</ion-button>
+           <span class="title-font "> {{prod.quantity||1}} </span>
+          <ion-button color="warning" size="small" class="qty" (click)="increment(prod.id)">+</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="warning" size="small" class="atc" (click)="addToCart()">Add to cart</ion-button>
+          <ion-button color="warning" size="small" class="atc" (click)="addToCart(prod.id)">Add to cart</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
