@@ -1,9 +1,51 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login-security</ion-title>
+<ion-header color="danger">
+  <ion-toolbar color="warning">
+    <ion-title>Account </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="form-content">
+  <form >
+    <ion-card>
+      <ion-card-content>
+<ion-item class="edit" lines="none"> <ion-button color="warning"><img src="../../../assets/image/profile/pencil (1).png"><span>Edit</span></ion-button>
+</ion-item>        
+ 
+        <ion-item class="label">
+          <ion-label position="floating">Username</ion-label>
+          <ion-input type="name" ></ion-input>
+        </ion-item>
+      
+        <br>
+        <ion-item class="label">
+          <ion-label position="floating">Mobile</ion-label>
+          <ion-input type="tel" ></ion-input>
+        </ion-item>
+  
+        <br>
+        <ion-item class="label">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" ></ion-input>
+        </ion-item>
+     
+     
+      
+ <ion-row >
+	<ion-col col-6>
+		<ion-button color="primary" class="my-width" large>
+			<b>Clear</b>
+		</ion-button>
+	</ion-col>	<ion-col col-6> 
+		<ion-button color="success" class="my-width btn" large >
+			<b>Save</b>
+		</ion-button>
+	</ion-col>
+</ion-row>
 
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </form>
 </ion-content>
