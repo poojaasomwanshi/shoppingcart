@@ -26,7 +26,7 @@
       <ion-row>
         <ion-col>
           <ion-button color="warning" size="small" class="qty" (click)="decrement(prod.id)">-</ion-button>
-           <span class="title-font "> {{prod.quantity||1}} </span>
+           <span class="title-font "> {{prod.quantity||0}} </span>
           <ion-button color="warning" size="small" class="qty" (click)="increment(prod.id)">+</ion-button>
         </ion-col>
         <ion-col>

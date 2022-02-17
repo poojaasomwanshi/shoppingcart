@@ -41,7 +41,7 @@ export class ProductsDetailPage implements OnInit {
         if(element.quantity){
           element.quantity++;
         }else{
-          element.quantity=2;
+          element.quantity=1;
         }
       }
     });
@@ -53,7 +53,7 @@ export class ProductsDetailPage implements OnInit {
         if(element.quantity>1){
           element.quantity--;
         }else{
-          element.quantity=2;
+          element.quantity=1;
         }
       }
     });
@@ -62,7 +62,7 @@ export class ProductsDetailPage implements OnInit {
   public addToCart(id: number) {
     this.products.forEach(element => {
       if (id == element.id) {
-        //this.cartsvc.addOrderProduct(element);
+        this.cartsvc.addOrderProduct(element);
       }
     });
   }
