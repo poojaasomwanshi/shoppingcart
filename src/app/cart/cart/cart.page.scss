@@ -5,5 +5,25 @@
 }
 .prod-img{
     position: relative;
-    top:15%
+    top:15%;
+}
+.edit-img{
+    position: relative;
+    left: 85%;
+    
+    width: 35px;
+    height: 35px;
+}
+.qty{
+    position: relative;
+    bottom: 4px;
+}
+
+ion-item{
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.toolbar{
+    --background: rgb(138, 34, 138);
+    --color:white;
 }

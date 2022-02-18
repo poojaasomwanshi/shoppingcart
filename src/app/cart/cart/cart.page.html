@@ -1,13 +1,13 @@
 <ion-header>
-  <ion-toolbar color="warning">
-    <ion-title>cart</ion-title>
+  <ion-toolbar class="toolbar">
+  <ion-title>Cart</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-card>
     <ion-grid>
-      <ion-row>
+      <ion-row class="title-font">
         <ion-col>
           Products
         </ion-col>
@@ -17,7 +17,7 @@
       </ion-row>
     </ion-grid>
   </ion-card>
-  <ion-card *ngFor="let prod of productList" class="title-font">
+  <ion-item *ngFor="let prod of productList" class="title-font">
     <ion-grid>
       <ion-row>
         <ion-col size="3">
@@ -26,14 +26,25 @@
         <ion-col>
           {{prod.title}}<br>
           Price = {{prod.price}}<br>
-          Quantity = {{prod.quantity}}
+           
+          <ion-button  size="small" class="qty toolbar"  (click)="decrement(prod.title)">-</ion-button>
+           <span class="title-font "> {{prod.quantity}} </span>
+          <ion-button  size="small" class="qty toolbar"  (click)="increment(prod.title)">+</ion-button>
         </ion-col>
         <ion-col size="2">
           {{prod.quantity*prod.price}}
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ion-card>
-  {{totalPrice}}
-  <ion-button expand="block">Confirm Order</ion-button>
+  </ion-item>
+  <ion-item>
+  <ion-grid>
+    <ion-row>
+      <ion-col>Total Price</ion-col>
+      <ion-col size="2">{{totalPrice}}</ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-item>
+  <br>
+  <ion-button expand="block" class="toolbar">Proceed To Pay</ion-button>
 </ion-content>
