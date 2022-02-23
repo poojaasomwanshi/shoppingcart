@@ -16,9 +16,6 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-
-
-
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HomeModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
