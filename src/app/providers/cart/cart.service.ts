@@ -6,9 +6,9 @@ import { Injectable } from '@angular/core';
 export class CartService {
   private cart = [];
 
-  constructor() {}
+  constructor() { }
 
-  public addOrderProduct(orderProduct: any) {
+  public addOrderProduct(orderProduct: any):boolean {
     let status = true;
     if (localStorage.getItem("cart") == null) {
       localStorage.setItem("cart", JSON.stringify(this.cart));
@@ -28,9 +28,21 @@ export class CartService {
     }
     localStorage.setItem("cart", JSON.stringify(this.cart));
     console.log(this.cart);
+    return status;
   }
 
-  public getCart():any[]{
+  public getCart(): any[] {
     return JSON.parse(localStorage.getItem("cart"))
+  }
+
+  public deleteFromCart(title: string): any {
+    this.cart = JSON.parse(localStorage.getItem("cart"));
+    this.cart.forEach((prod, index) => {
+      if (prod.title === title) {
+        this.cart.splice(index, 1);
+      }
+    });
+    localStorage.setItem("cart", JSON.stringify(this.cart));
+    return this.cart;
   }
 }

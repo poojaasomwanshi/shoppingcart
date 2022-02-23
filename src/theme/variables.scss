@@ -200,7 +200,7 @@
     --ion-background-color: #ffffff;
     --ion-background-color-rgb: 18,18,18;
 
-    --ion-text-color: #ffffff;
+    --ion-text-color: #000000;
     --ion-text-color-rgb: 255,255,255;
 
     --ion-border-color: #222222;
@@ -237,4 +237,7 @@
 ion-content{
   --background:rgb(255, 220, 246)           ;
 }
-
+.toolbar{
+  --background: rgb(177, 32, 182);
+  --color:white;
+}

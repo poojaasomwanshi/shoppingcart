@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { ToastController } from '@ionic/angular';
 
 import { CartService } from 'src/app/providers/cart/cart.service';
 import { ProductService } from 'src/app/providers/product/product.service';
@@ -12,7 +13,8 @@ import { ProductService } from 'src/app/providers/product/product.service';
 export class ProductsDetailPage implements OnInit {
   public category: string;
   public products: any = [];
-  constructor(private activatedRoute: ActivatedRoute, private cartsvc: CartService, private prodsvc: ProductService) { }
+  
+  constructor(private activatedRoute: ActivatedRoute, private toastController: ToastController,private cartsvc: CartService, private prodsvc: ProductService) { }
 
   ngOnInit() {
     this.category = this.activatedRoute.snapshot.paramMap.get('category');
@@ -59,11 +61,36 @@ export class ProductsDetailPage implements OnInit {
     });
   }
 
-  public addToCart(id: number) {
-    this.products.forEach(element => {
+  public async addToCart(id: number) {
+    let status:boolean;
+    this.products.forEach(async (element) => {
       if (id == element.id) {
-        this.cartsvc.addOrderProduct(element);
+        if(element.quantity){
+          status= this.cartsvc.addOrderProduct(element);
+        }else{
+          const toast1 =await this.toastController.create({
+            message: 'Minimum Quantity should be 1 ..',
+            duration: 2000
+          });
+          toast1.present();
+        }
+        
       }
     });
+
+    if(status){
+      const toast2 =await this.toastController.create({
+        message: 'Item added to cart successfully..',
+        duration: 2000
+      });
+      toast2.present();
+    }else{
+      const toast3 =await this.toastController.create({
+        message: 'Item updated to cart successfully..',
+        duration: 2000
+      });
+      toast3.present();
+      
+    }
   }
 }

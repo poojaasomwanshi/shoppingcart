@@ -1,50 +1,68 @@
 <ion-header>
   <ion-toolbar class="toolbar">
-  <ion-title>Cart</ion-title>
+    <ion-title>Cart</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-card>
-    <ion-grid>
-      <ion-row class="title-font">
-        <ion-col>
-          Products
-        </ion-col>
-        <ion-col size="3">
-          Total Price / product
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-card class="nologin" *ngIf="!isLogin" align="center">
+    <ion-img class="nolog" src="../../../assets/image/password.png"></ion-img>
+    <ion-title class="title-font">{{message}}</ion-title>
+    <ion-button href="/login" class="toolbar">Login</ion-button>
+    <br>
+</ion-card>
+  <ion-card class="noitemcart" *ngIf="isLogin&&isCartEmpty" align="center">
+      <ion-img class="noitem" src="../../../assets/image/empty-cart.png"></ion-img>
+      <ion-title class="title-font">{{message}}</ion-title>
+      <br>
   </ion-card>
-  <ion-item *ngFor="let prod of productList" class="title-font">
-    <ion-grid>
-      <ion-row>
-        <ion-col size="3">
-          <ion-img src="{{prod.imgurl}}" class="prod-img"></ion-img>
-        </ion-col>
-        <ion-col>
-          {{prod.title}}<br>
-          Price = {{prod.price}}<br>
-           
-          <ion-button  size="small" class="qty toolbar"  (click)="decrement(prod.title)">-</ion-button>
-           <span class="title-font "> {{prod.quantity}} </span>
-          <ion-button  size="small" class="qty toolbar"  (click)="increment(prod.title)">+</ion-button>
-        </ion-col>
-        <ion-col size="2">
-          {{prod.quantity*prod.price}}
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-item>
-  <ion-item>
-  <ion-grid>
-    <ion-row>
-      <ion-col>Total Price</ion-col>
-      <ion-col size="2">{{totalPrice}}</ion-col>
-    </ion-row>
-  </ion-grid>
-  </ion-item>
-  <br>
-  <ion-button expand="block" class="toolbar">Proceed To Pay</ion-button>
+  
+  <div *ngIf="isLogin&&!isCartEmpty">
+    <ion-card>
+      <ion-grid>
+        <ion-row class="title-font">
+          <ion-col>
+            Products
+          </ion-col>
+          <ion-col size="3">
+            Total Price / product
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <ion-item *ngFor="let prod of productList" class="title-font">
+      <ion-grid *ngIf="!isCartEmpty">
+        <ion-row>
+          <ion-col size="3">
+            <ion-img src="{{prod.imgurl}}" class="prod-img"></ion-img>
+          </ion-col>
+          <ion-col>
+            {{prod.title}}<br>
+            Price = {{prod.price}}<br>
+
+            <ion-button size="small" class="qty toolbar" (click)="decrement(prod.title)">-</ion-button>
+            <span class="title-font "> {{prod.quantity}} </span>
+            <ion-button size="small" class="qty toolbar" (click)="increment(prod.title)">+</ion-button>
+            <ion-button size="small" class="toolbar" (click)="deleteFromCart(prod.title)">Delete</ion-button>
+          </ion-col>
+          <ion-col size="2">
+            {{prod.quantity*prod.price}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Total Price</ion-col>
+          <ion-col size="2">{{totalPrice}}</ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+    <br>
+    <ion-button expand="block" class="toolbar" (click)="proceedToPay()">Proceed To Pay</ion-button>
+  </div>
 </ion-content>
