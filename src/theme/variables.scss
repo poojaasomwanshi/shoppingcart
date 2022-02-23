@@ -200,7 +200,7 @@
     --ion-background-color: #ffffff;
     --ion-background-color-rgb: 18,18,18;
 
-    --ion-text-color: #ffffff;
+    --ion-text-color: #000000;
     --ion-text-color-rgb: 255,255,255;
 
     --ion-border-color: #222222;
@@ -225,12 +225,19 @@
     --ion-color-step-900: #e7e7e7;
     --ion-color-step-950: #f3f3f3;
 
-    --ion-item-background: #ffffff;
+    --ion-item-background: #fffefe;
 
-    --ion-toolbar-background: #fd8422;
+    --ion-toolbar-background: #ffffff;
 
-    --ion-tab-bar-background: #c6e227;
+    --ion-tab-bar-background: #ffffff;
 
     --ion-card-background: #ffffff;
   }
+}
+ion-content{
+  --background:rgb(255, 220, 246)           ;
+}
+.toolbar{
+  --background: rgb(177, 32, 182);
+  --color:white;
 }

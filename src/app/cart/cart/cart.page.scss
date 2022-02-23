@@ -1,0 +1,49 @@
+.title-font{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    color: black;
+}
+.prod-img{
+    position: relative;
+    top:15%;
+}
+.edit-img{
+    position: relative;
+    left: 85%;
+    
+    width: 35px;
+    height: 35px;
+}
+.qty{
+    position: relative;
+    bottom: 4px;
+}
+
+ion-item{
+    width: 94%;
+    margin-left: 3%;
+}
+.noitem{
+    width: 50%;
+    height: 50%;
+    margin-left: 21%;
+}
+.noitemcart{
+    width: 76%;
+    margin-top: 60%;
+    margin-left: 13%;
+    border-radius: 30px;
+    padding: 3%;
+}
+.nologin{
+    width: 80%;
+    margin-top: 60%;
+    margin-left: 10%;
+    border-radius: 30px;
+    padding: 3%;
+}
+.nolog{
+    width: 50%;
+    height: 50%;
+    margin-left: 25%;
+}

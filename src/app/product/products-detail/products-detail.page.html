@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="warning">
+  <ion-toolbar class="toolbar">
     <ion-title>Products</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -25,12 +25,12 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <ion-button color="warning" size="small" class="qty" (click)="decrement()">-</ion-button>
-           <span class="title-font "> {{quantity}} </span>
-          <ion-button color="warning" size="small" class="qty" (click)="increment()">+</ion-button>
+          <ion-button size="small" class="qty toolbar" (click)="decrement(prod.id)">-</ion-button>
+           <span class="title-font "> {{prod.quantity||0}} </span>
+          <ion-button size="small" class="qty toolbar" (click)="increment(prod.id)">+</ion-button>
         </ion-col>
         <ion-col>
-          <ion-button color="warning" size="small" class="atc" (click)="addToCart()">Add to cart</ion-button>
+          <ion-button size="small" class="atc toolbar" (click)="addToCart(prod.id)">Add to cart</ion-button>
         </ion-col>
       </ion-row>
     </ion-grid>
