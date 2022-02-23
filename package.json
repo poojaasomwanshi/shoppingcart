@@ -50,13 +50,7 @@
     "@typescript-eslint/parser": "5.3.0",
     "com.razorpay.cordova": "github:razorpay/razorpay-cordova",
     "cordova-android": "^9.1.0",
-<<<<<<< HEAD
-<<<<<<< HEAD
     "cordova-plugin-add-swift-support": "^2.0.2",
-=======
->>>>>>> 237fcc38ca6e87bb0f74ad9e9cb44a6c2bbb2311
-=======
->>>>>>> 237fcc38ca6e87bb0f74ad9e9cb44a6c2bbb2311
     "cordova-plugin-androidx": "^3.0.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-geolocation": "^4.1.0",
@@ -91,8 +85,11 @@
       "cordova-plugin-ionic-keyboard": {},
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "cordova-plugin-geolocation": {},
       "cordova-plugin-nativegeocoder": {},
+=======
+>>>>>>> 237fcc38ca6e87bb0f74ad9e9cb44a6c2bbb2311
 =======
 >>>>>>> 237fcc38ca6e87bb0f74ad9e9cb44a6c2bbb2311
 =======
