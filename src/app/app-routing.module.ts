@@ -64,45 +64,11 @@ const routes: Routes = [
   {
     path: 'demo',
     loadChildren: () => import('./demo/demo/demo.module').then( m => m.DemoPageModule)
-  },  {
+  },
+  {
     path: 'modal',
     loadChildren: () => import('./modal/modal/modal.module').then( m => m.ModalPageModule)
   },
-<<<<<<< HEAD
-=======
-  {
-    path: 'my-account',
-    loadChildren: () => import('./profile/my-account/my-account.module').then( m => m.MyAccountPageModule)
-  },
-{
-    path: 'address',
-    loadChildren: () => import('./profile/address/address.module').then( m => m.AddressPageModule)
-  },
-  {
-    path: 'login-security',
-    loadChildren: () => import('./profile/login-security/login-security.module').then( m => m.LoginSecurityPageModule)
-  },
-  {
-    path: 'forgot-password',
-    loadChildren: () => import('./Auth/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
-  },
-  {
-    path: 'profile',
-    loadChildren: () => import('./profile/profile/profile.module').then( m => m.ProfilePageModule)
-  },
-  
-  {
-    path: 'products-detail/:category',
-    loadChildren: () => import('./product/products-detail/products-detail.module').then( m => m.ProductsDetailPageModule)
-  },
-  {
-    path: 'cart',
-    loadChildren: () => import('./cart/cart/cart.module').then( m => m.CartPageModule)
-  },
-
-
-  
->>>>>>> 237fcc38ca6e87bb0f74ad9e9cb44a6c2bbb2311
 
 
 
