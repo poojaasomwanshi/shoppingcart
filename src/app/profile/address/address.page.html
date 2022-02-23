@@ -1,82 +1,39 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>address</ion-title>
+    <ion-title>
+Address    </ion-title>
+<ion-buttons slot="start">
+  <ion-back-button defaultHref="/my-account"></ion-back-button>
+</ion-buttons>
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-  <ion-item class="signupheader ion-no-padding" lines="none">
-    <ion-img slot="start" src="../../../assets/image/address/house.png">
-
-    </ion-img>
-    
-     <div>
-        <p class="address">Address</p>
-
-      <p class="address1">SHIPPING DETAILS</p>
-       </div>
-      
-  </ion-item >
-  <ion-item lines="none" >      <ion-button class="location"> Use My current location <ion-icon name="location" slot="start"></ion-icon></ion-button>
-  </ion-item>
-  <form [formGroup]="addressForm" (ngSubmit)="submitForm()" novalidate>
-
-  <ion-item class="label" lines="none">
-    <ion-input type="name"  placeholder="House No/Apartment No" lines="none" formControlName="housenumber"></ion-input>
-  </ion-item>
-  <ion-item class="label" lines="none">
-    <ion-input type="name"  placeholder="Street address1" lines="none" formControlName="streetadd1"></ion-input>
-  </ion-item>
-  <ion-item class="label" lines="none">
-    <ion-input type="name"  placeholder="Street address2" lines="none" formControlName="streetadd2"></ion-input>
-  </ion-item>
-  <ion-grid>
-    <ion-row>
-      <ion-col width-40>
-  <ion-item>
-    <ion-label>Country</ion-label>
-    <ion-select placeholder="Select One" formControlName="country">
-      <ion-select-option value="in">India</ion-select-option>
-    </ion-select>
-        </ion-item>
-      </ion-col>
-      <ion-col width-40>
-        <ion-item >
-          <ion-label>State</ion-label>
-    <ion-select placeholder="Select One" formControlName="state">
-      <ion-select-option value="in">Maharashtra</ion-select-option>
-    </ion-select>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  
-  
-  </ion-grid>
-  <ion-grid>
-    <ion-row>
-      <ion-col width-40>
-<ion-item>
-  <ion-label>City</ion-label>
-  <ion-select placeholder="Select One" formControlName="city">
-    <ion-select-option value="m">pune</ion-select-option>
-  </ion-select>
-        </ion-item>
-      </ion-col>
-      <ion-col width-40>
-        <ion-item >
-          <ion-label>ZipCode</ion-label>
-          <ion-select placeholder="Select One" formControlName="zipcode">
-            <ion-select-option value="m">410038</ion-select-option>
-          </ion-select>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-
-
-</ion-grid>
-
-<ion-item lines="none" >      <ion-button class="addAddress" type="submit"> Add Address</ion-button>
-</ion-item>
-
-</form>
+  <div class="ion-padding">
+    <ion-button (click)="getCurrentCoordinates()" expand="block">
+      Get Location
+    </ion-button>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>Location Coordinates</ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label>
+        Latitue {{latitude}}
+      </ion-label>
+      <ion-badge color="danger" slot="end"></ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Longitude
+      </ion-label>
+      <ion-badge color="danger" slot="end">{{longitude}}</ion-badge>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Address
+      </ion-label>
+      <ion-badge color="danger" slot="end">{{address}}</ion-badge>
+    </ion-item>
+    </ion-list>    
+  </div>
 </ion-content>

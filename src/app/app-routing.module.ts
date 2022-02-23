@@ -6,6 +6,7 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import('./home/home/home.module').then( m => m.HomePageModule)
   },
+  
   {
     path: 'home',
     loadChildren: () => import('./home/home/home.module').then( m => m.HomePageModule)
@@ -60,6 +61,15 @@ const routes: Routes = [
     path: 'products-detail/:category',
     loadChildren: () => import('./product/products-detail/products-detail.module').then( m => m.ProductsDetailPageModule)
   },
+  {
+    path: 'demo',
+    loadChildren: () => import('./demo/demo/demo.module').then( m => m.DemoPageModule)
+  },  {
+    path: 'modal',
+    loadChildren: () => import('./modal/modal/modal.module').then( m => m.ModalPageModule)
+  },
+
+
 
   
 

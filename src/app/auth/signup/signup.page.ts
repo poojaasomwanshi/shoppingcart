@@ -1,20 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {FormGroup,FormBuilder,Validators,FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { AuthenticationService,Signupata,Regdata } from 'src/app/services/authentication.service';
+import { LoginPage } from '../login/login.page';
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.page.html',
   styleUrls: ['./signup.page.scss'],
 })
 export class SignupPage implements OnInit {
-  signupForm:FormGroup;
+//  users:Regdata;
+  userregdata:Regdata;  signupForm:FormGroup;
   isSubmitted=false;
   showpassword=false;
   passwordToggleicon='eye';
-  constructor(public formBuilder:FormBuilder, private router: Router) { }
+  signupdata: Signupata = null;
+  signupdatas:Signupata[]=[];
+  id: any;
+arr:any={};
+i;
+  constructor(public formBuilder:FormBuilder, private router: Router,private dataService: AuthenticationService,) {
+    this.dataService.getsignupData().subscribe(res=>{
+      console.log(res)
+      this.signupdatas=res;
+    })
+ 
+   }
 
   ngOnInit() {
+    this.dataService.getsignupDataById(this.id).subscribe(res => {
+      this.signupdata= res;
+      // console.log(res)
+      console.log(this.signupdatas.length)
+    });
     this.signupForm =this.formBuilder.group({
       username:['',[Validators.required,Validators.minLength(3),Validators.maxLength(30)]],
       mobile:['',[Validators.required,Validators.pattern(/^([+]\d{2})?\d{10}$/)]],
@@ -43,14 +61,63 @@ export class SignupPage implements OnInit {
       console.log("provide required values")
       return false;
     }else{
-      alert("SignUp Successfull")
-      console.log(this.signupForm.value.username , this.signupForm.value.email , this.signupForm.value.mobile)
+      
+      // this.userregdata=Object.assign(this.userregdata,this.signupForm.value);
+      console.log(this.userregdata)
+
+      this.adduserdatatolocalstorage(this.userData())
+      console.log(this.userregdata)      // console.log(this.signupForm.value.username , this.signupForm.value.email , this.signupForm.value.mobile)
       this.signupForm.reset()
       //move to home page  after login
-      this.router.navigate(['tabs/home'])
+      this.router.navigate(['/home'])
+      // var values = (localStorage.getItem('Users'));
+      // console.log(values)
+
+
 
     }
   }
- 
+  userData():Regdata{
+return this.userregdata={
+  email:this.email.value,
+  password:this.password.value
+}
+  }
+  get email(){
+    return this.signupForm.get('email') as FormControl;
+  }
+  get password(){
+    return this.signupForm.get('password') as FormControl;
+  }
+  adduserdatatolocalstorage(userregdata:Regdata){
+    let users=[];
+    if(localStorage.getItem('Reg')){
+      users=JSON.parse(localStorage.getItem('Reg'));
+      users=[userregdata, ...users]
+    }
+    else{
+      users=[userregdata];
+    }
+    localStorage.setItem('Reg',JSON.stringify(users))
+
+  } 
+  getuser(){
+    let user_records=new Array();
+  
+    user_records=JSON.parse(localStorage.getItem('Reg'))?JSON.parse(localStorage.getItem('Reg')):[]
+if(user_records){
+  for (let i=0; i<user_records.length;i++){
+    console.log(user_records[i].email,user_records[i].password)
+
+  }
+}
+
+  }
+  async addregUser(){
+    this.signupdata=this.signupForm.value
+    
+    await this.dataService.addsignupData(this.signupdata)
+    }
+   
 }
 

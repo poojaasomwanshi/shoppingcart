@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar color="warning">
-    <ion-title>Login</ion-title>
+        <ion-title>Login</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -39,8 +42,8 @@
     Password must contain at least 6 and max 16 letters with special symbol,upper-lower case character and number.
   </span>
   <p class="forgottext" > <a href="/forgot-password">Forgot your password ?</a></p>
-  <ion-button expand="block"  class="loginButton" type="submit" >LogIn</ion-button>
-
+  <ion-button expand="block"  class="loginButton" type="submit"  >LogIn</ion-button>
+<!-- <button (click)="testdata()">test</button> -->
 
 <div class="loginOptions">
   <h4 class="loginWith"> Or</h4><div>
@@ -52,8 +55,8 @@
 </ion-card>
 
 </form> 
-
-<p class="bottomtext">Don't have an account ? <a href="/signup" class="register"> Register Now</a> </p>
+<!-- <ion-button (click)="getuser()"></ion-button> -->
+<p class="bottomtext">Don't have an account ? <ion-button (click)="gotoRegister()" class="register"> Register Now</ion-button> </p>
  
 </ion-content>
 

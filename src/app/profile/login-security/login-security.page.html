@@ -1,6 +1,9 @@
 <ion-header color="danger">
   <ion-toolbar color="warning">
     <ion-title>Account </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/my-account"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -8,35 +11,39 @@
   <form >
     <ion-card>
       <ion-card-content>
-<ion-item class="edit" lines="none"> <ion-button color="warning"><img src="../../../assets/image/profile/pencil (1).png"><span>Edit</span></ion-button>
+      
+<ion-item class="edit" lines="none"> <ion-button color="warning" (click)="editmode()"><img src="../../../assets/image/profile/pencil (1).png"><span>Edit</span></ion-button>
 </ion-item>        
  
-        <ion-item class="label">
-          <ion-label position="floating">Username</ion-label>
-          <ion-input type="name" ></ion-input>
-        </ion-item>
-      
-        <br>
-        <ion-item class="label">
-          <ion-label position="floating">Mobile</ion-label>
-          <ion-input type="tel" ></ion-input>
-        </ion-item>
-  
-        <br>
-        <ion-item class="label">
-          <ion-label position="floating">Email</ion-label>
-          <ion-input type="email" ></ion-input>
-        </ion-item>
-     
+   <ion-list *ngFor="let item of arr">     <ion-item class="label">
+    <ion-label position="floating">{{item.username}}</ion-label>
+    <ion-input *ngIf="editMode==false"  type="name" ></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-item class="label">
+    <ion-label position="floating">{{item.mobile}}</ion-label>
+    <ion-input *ngIf="editMode==false" type="tel" ></ion-input>
+  </ion-item>
+
+  <br>
+  <ion-item class="label">
+    <ion-label position="floating">{{item.email}}</ion-label>
+    <ion-input type="email" ></ion-input>
+  </ion-item>
+  <ion-item class="label">
+    <ion-label position="floating">{{item.password}}</ion-label>
+    <ion-input *ngIf="editMode==false" type="password" ></ion-input>
+  </ion-item></ion-list>
      
       
  <ion-row >
 	<ion-col col-6>
-		<ion-button color="primary" class="my-width" large>
+		<ion-button color="primary" class="my-width" large  [disabled]="editMode==false">
 			<b>Clear</b>
 		</ion-button>
 	</ion-col>	<ion-col col-6> 
-		<ion-button color="success" class="my-width btn" large >
+		<ion-button color="success" class="my-width btn" large  [disabled]="editMode==false">
 			<b>Save</b>
 		</ion-button>
 	</ion-col>

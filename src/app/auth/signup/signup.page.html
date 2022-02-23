@@ -1,6 +1,9 @@
 <ion-header color="danger">
   <ion-toolbar color="warning">
     <ion-title>SignUp </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -73,7 +76,7 @@
           *ngIf="!signupForm.reset &&isSubmitted && errorControl.password.errors?.pattern">
           Password must contain at least 6 and max 16 letters with special symbol,upper-lower case character and number.
         </span>
-        <ion-button expand="block" class="signupButton" type="submit">SignUp</ion-button>
+        <ion-button expand="block" class="signupButton" type="submit"  (click)="addregUser()">SignUp</ion-button>
 
 
       </ion-card-content>
@@ -81,7 +84,7 @@
     </ion-card>
 
   </form>
-
+<ion-button (click)="getuser()">Hello</ion-button>
   <p class="bottomtext">Already have account ? <a href="/login" class="register"> LogIn here ..</a> </p>
 
 </ion-content>

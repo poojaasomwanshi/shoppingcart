@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup,FormBuilder,Validators,FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-
+import { Geolocation } from '@ionic-native/geolocation/ngx';
+import { NativeGeocoder,NativeGeocoderOptions, NativeGeocoderResult } from '@ionic-native/native-geocoder/ngx';
 
 @Component({
   selector: 'app-address',
@@ -9,43 +9,79 @@ import { Router } from '@angular/router';
   styleUrls: ['./address.page.scss'],
 })
 export class AddressPage implements OnInit {
-  addressForm:FormGroup;
-  isSubmitted=false;
-  constructor(public formBuilder:FormBuilder, private router: Router) { }
+
+  latitude: any = 0; //latitude
+  longitude: any = 0; //longitude
+  address: string;
+
+
+  constructor( private router: Router,private geolocation:Geolocation,  private nativeGeocoder: NativeGeocoder) { }
 
   ngOnInit() {
-    this.addressForm =this.formBuilder.group({
-      housenumber:['',[Validators.required,Validators.minLength(3),Validators.maxLength(15)]],
-      streetadd1:['',[Validators.required,Validators.minLength(3),Validators.maxLength(15)]],
-      streetadd2:['',[Validators.required,Validators.minLength(3),Validators.maxLength(15)]],
-      city:['',[Validators.required,]],
-      country:['',[Validators.required,]],
-      state:['',[Validators.required,]],
-      zipcode:['',[Validators.required]],
-
-        })
+    
   }
  
 
-  submitForm(){
-    this.isSubmitted=true;
-    if(!this.addressForm.valid){
-      console.log("provide required values")
-      return false;
-    }else{
-      alert("address added")
-      console.log(this.addressForm.value)
-      this.addressForm.reset()
-      //move to home page  after login
-      this.router.navigate(['/my-account'])
+  getCurrentCoordinates(){
+this.geolocation.getCurrentPosition({timeout:10000,enableHighAccuracy:true}).then((res)=>{
+  this.latitude=res.coords.latitude;
+  this.longitude=res.coords.longitude;
+  console.log(this.latitude)
+console.log(this.longitude)
 
-    }
+}).catch((e)=>{
+  console.log(e)
+})
+}
+// options = {
+//   timeout: 10000, 
+//   enableHighAccuracy: true, 
+//   maximumAge: 3600
+// };
+// // use geolocation to get user's device coordinates
+// async () {
+//  await this.geolocation.getCurrentPosition().then((resp) => {
+//     console.log(resp)
+//     this.latitude = resp.coords.latitude;
+//     this.longitude = resp.coords.longitude;
+//     console.log(this.latitude)
+//     console.log(this.longitude)
 
-    
-  }
-  
 
-  
+//     this.getAddress(this.latitude, this.longitude);
+//    }).catch((error) => {
+//      console.log('Error getting location', error);
+//    });
+// }
+// // geocoder options
+// nativeGeocoderOptions: NativeGeocoderOptions = {
+//   useLocale: true,
+//   maxResults: 5
+// };
+// // get address using coordinates
+// getAddress(lat,long){
+//   this.nativeGeocoder.reverseGeocode(lat, long, this.nativeGeocoderOptions)
+//   .then((res: NativeGeocoderResult[]) => {
+//     this.address = this.pretifyAddress(res[0]);
+//   })
+//   .catch((error: any) => {
+//     alert('Error getting location'+ JSON.stringify(error));
+//   });
+// }
+// // address
+// pretifyAddress(address){
+//   let obj = [];
+//   let data = "";
+//   for (let key in address) {
+//     obj.push(address[key]);
+//   }
+//   obj.reverse();
+//   for (let val in obj) {
+//     if(obj[val].length)
+//     data += obj[val]+', ';
+//   }
+//   return address.slice(0, -2);
+// }
 }
 
 

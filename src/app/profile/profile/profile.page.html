@@ -39,8 +39,8 @@
       <ion-avatar>
         <img src="../../../assets/image/profile/user.png" />
       </ion-avatar>
-      <p>Jack Smith</p>
-<p>9148653551 | Jack@gmail.com</p>
+ <div *ngFor="let item of arr">     <p>{{item.username}}</p>
+  <p>{{item.mobile}} | {{item.email}}</p></div>
 </div>
   </ion-grid></ion-card>
 </div>
@@ -73,12 +73,12 @@
 </ion-item>
 
 
-<ion-item class="listitem1 listitems" lines="none" *ngIf="isloggedin==true">
+<ion-item class="listitem1 listitems" lines="none" *ngIf="isloggedin==true" button (click)="buttonsClick()">
   <ion-icon class="logos" slot="start" name="chatbox-ellipses-outline"></ion-icon>
     <ion-label>Feedback</ion-label>
     <ion-icon class="logo" name="caret-forward-outline"></ion-icon>
   </ion-item>
-<ion-item class="listitem listitems" lines="none" *ngIf="isloggedin==true">
+<ion-item class="listitem listitems" lines="none" *ngIf="isloggedin==true" button (click)="logoutClick()">
   <ion-icon class="logos" slot="start" name="log-out-outline"></ion-icon>
 
   <ion-label>Logout</ion-label>
