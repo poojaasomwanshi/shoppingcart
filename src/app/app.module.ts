@@ -16,8 +16,9 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HomeModule, HttpClientModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HomeModule, HttpClientModule,provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideFirestore(()=> getFirestore()),],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy },Geolocation,NativeGeocoder],
   bootstrap: [AppComponent],
 })
 export class AppModule { }
