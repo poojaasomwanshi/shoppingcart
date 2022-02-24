@@ -223,7 +223,16 @@ values.foreach(function(user){
 })
 }
 
-
+// let user_records=new Array();
+//   user_records=JSON.parse(localStorage.getItem("Reg"))?JSON.parse(localStorage.getItem("Reg")):[]
+//   if(this.loginForm.valid && user_records.some((v)=>{return v.email==email && v.password==password}))
+//   {
+//     alert("Login successful");
+//     let current_user=user_records.filter((v)=>{return v.email==email && v.password==password})[0]
+//    this.adduserdatatolocalstorage(this.userData())
+//    this.loginForm.reset()
+//       this.router.navigate(['/home'])
+//   }
 
 
 }

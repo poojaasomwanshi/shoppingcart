@@ -9,6 +9,7 @@ import{Firestore} from '@angular/fire/firestore'
 })
 export class LoginSecurityPage implements OnInit {
   arr: Signupata[] = [];
+  useremail: any;
 editMode=false;
    current_user;
      constructor(private dataService: AuthenticationService,) { }
@@ -26,6 +27,12 @@ editMode=false;
     this.editMode=true
   }
 
+userdata(){
+  for(let i in this.arr){
+    this.useremail=this.arr[i].email
+  }
+  console.log(this.useremail)
 
+}
 
 }

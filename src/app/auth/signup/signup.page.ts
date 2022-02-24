@@ -62,11 +62,10 @@ i;
       return false;
     }else{
       
-      // this.userregdata=Object.assign(this.userregdata,this.signupForm.value);
       console.log(this.userregdata)
 
-      this.adduserdatatolocalstorage(this.userData())
-      console.log(this.userregdata)      // console.log(this.signupForm.value.username , this.signupForm.value.email , this.signupForm.value.mobile)
+     
+      console.log(this.userregdata)    
       this.signupForm.reset()
       //move to home page  after login
       this.router.navigate(['/home'])
@@ -77,30 +76,8 @@ i;
 
     }
   }
-  userData():Regdata{
-return this.userregdata={
-  email:this.email.value,
-  password:this.password.value
-}
-  }
-  get email(){
-    return this.signupForm.get('email') as FormControl;
-  }
-  get password(){
-    return this.signupForm.get('password') as FormControl;
-  }
-  adduserdatatolocalstorage(userregdata:Regdata){
-    let users=[];
-    if(localStorage.getItem('Reg')){
-      users=JSON.parse(localStorage.getItem('Reg'));
-      users=[userregdata, ...users]
-    }
-    else{
-      users=[userregdata];
-    }
-    localStorage.setItem('Reg',JSON.stringify(users))
 
-  } 
+  
   getuser(){
     let user_records=new Array();
   

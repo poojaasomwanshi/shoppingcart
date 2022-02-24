@@ -15,8 +15,8 @@ export class LoginPage implements OnInit {
   loguser: Logindata = null;
   loguserdatas:Logindata[]=[];
 email;password;
-
-
+useremail:any;
+userpassword:any;
 users:Signupata;
   user:any={};
   signupdata: Signupata = null;
@@ -88,17 +88,27 @@ else{
   let email,password;
   email=this.loginForm.value.email;
   password=this.loginForm.value.password;
-
-let user_records=new Array();
-  user_records=JSON.parse(localStorage.getItem("Reg"))?JSON.parse(localStorage.getItem("Reg")):[]
-  if(this.loginForm.valid && user_records.some((v)=>{return v.email==email && v.password==password}))
-  {
-    alert("Login successful");
-    let current_user=user_records.filter((v)=>{return v.email==email && v.password==password})[0]
-   this.adduserdatatolocalstorage(this.userData())
-   this.loginForm.reset()
-      this.router.navigate(['/home'])
+//******************************************************** */
+  for(let i in this.signupdatas){
+    this.useremail=this.signupdatas[i].email;
+    this.userpassword=this.signupdatas[i].password
   }
+  console.log(this.useremail)
+console.log(this.userpassword)
+
+let user_signup=JSON.stringify(this.signupdatas)
+let user_signupdata=new Array();
+user_signupdata=JSON.parse(user_signup)?JSON.parse(user_signup):[]
+if(this.loginForm.valid &&user_signupdata.some((v)=>{return v.email==email && v.password==password})){
+  let current_user=user_signupdata.filter((v)=>{return v.email==email && v.password==password})[0]
+  this.adduserdatatolocalstorage(this.userData())
+  this.loginForm.reset()
+     this.router.navigate(['/home'])
+}
+
+//******************************************************** */
+
+
   else
   {
     alert('Login Fail');
@@ -131,14 +141,16 @@ let user_records=new Array();
 
   } 
 
+  
+  gotoRegister(){
+    this.router.navigate(['/signup'])
+
+  }
+
   // async addlogUser(){
   //   this.loguser=this.loginForm.value
     
   //   await this.dataService.addlogUser(this.loguser)
   //   }
-  gotoRegister(){
-    this.router.navigate(['/signup'])
-
-  }
 
 }
